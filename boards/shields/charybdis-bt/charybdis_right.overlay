@@ -8,6 +8,19 @@
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
 
+    /*
+     * Right-side matrix mapping based on the physical GPIO labels
+     * visible on the replacement Pro Micro nRF52840 board and the
+     * continuity test:
+     *
+     * Columns: 104, 011, 100, 009, 029, 002
+     * Rows:    022, 031, 115, 024, 106
+     *
+     * In the nice_nano/pro_micro connector mapping used by this
+     * configuration, these correspond to:
+     * Columns: &pro_micro 8, 7, 6, 10, 20, 19
+     * Rows:    &pro_micro 4, 21, 18, 5, 9
+     */
     col-gpios
         = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -17,17 +30,12 @@
         , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 
-    /*
-     * Diagnostic test:
-     * Physical board pin marked "022" is addressed as
-     * &pro_micro 4 in the nice_nano/pro_micro mapping.
-     */
     row-gpios
         = <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         ;
 };
 
