@@ -1,0 +1,4 @@
+/* Row permutation test 08: 022 115 031 106 024 */
+&kscan0 {
+    row-gpios = <<&pro_micro 22 GPIO_ACTIVE_HIGH>>\n        , <<&pro_micro 115 GPIO_ACTIVE_HIGH>>\n        , <<&pro_micro 31 GPIO_ACTIVE_HIGH>>\n        , <<&pro_micro 106 GPIO_ACTIVE_HIGH>>\n        , <<&pro_micro 24 GPIO_ACTIVE_HIGH>>;
+};
