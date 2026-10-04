@@ -1,0 +1,22 @@
+include:
+  # QWERTY BT (Bluetooth / ワイヤレス版)
+  - board: nice_nano_v2
+    shield: charybdis_left
+    keymap: qwerty
+    format: bt
+    artifact-name: charybdis_qwerty_left
+
+
+  - board: nice_nano_v2
+    shield: charybdis_right
+    keymap: qwerty
+    format: bt
+    artifact-name: charybdis_qwerty_right
+    snippet: studio-rpc-usb-uart
+
+
+  # Firmware Reset (設定リセット用)
+  - board: nice_nano_v2
+    shield: settings_reset
+    format: reset
+    artifact-name: firmware_reset_nano_v2
