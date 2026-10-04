@@ -19,17 +19,15 @@
 
     /*
      * Diagnostic test:
-     * The measured top-right key has continuity to physical GPIO 022.
-     * Put GPIO 022 on every logical row so the test does not depend
-     * on the row index. If the current column GPIOs are correct,
-     * a key on the 022 line should become detectable.
+     * Physical board pin marked "022" is addressed as
+     * &pro_micro 4 in the nice_nano/pro_micro mapping.
      */
     row-gpios
-        = <&pro_micro 22 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 22 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 22 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 22 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 22 GPIO_ACTIVE_HIGH>
+        = <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
         ;
 };
 
